@@ -42,6 +42,12 @@
               <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
           {% endfor %}
           {% endif %}
+
+          {% if SOCIAL %}
+          {% for title, link in SOCIAL %}
+              <li><a href="{{ link }}">{{ title }}</a></li>
+          {% endfor %}
+          {% endif %}
           </ul>
           </div> <!-- End nav -->
         </div> <!-- End sidebar -->
@@ -83,7 +89,7 @@
 
 
       </div> <!-- End wrapper -->
-      
+      <div id="clear"></div>
       <div id="footer" class="body">
       </div><!-- End footer -->
 

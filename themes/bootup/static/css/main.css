@@ -3,8 +3,7 @@
  * By Dan Kolbman
  */
 html, body, .home {
-  background: #FCF9F0;
-
+  background: #333;
   color: #444;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.4em;
@@ -16,17 +15,22 @@ html, body, .home {
 #wrapper {
   width: 90%;
   margin: 0 auto;
+  background: none;
 }
 
 #header {
-  background:#222;
+  background:#1A5BB8;
   height: 15px;
 }
 
 #main {
+  background: #FCF9F0;
   margin-left: 180px; 
-  padding-left: 35px;
+  padding: 10px 35px;
   border-left: 4px solid #DBD6BF;
+  border-right: 4px solid #DBD6BF;
+  min-width: 400px;
+  max-width: 800px;
 }
 
 h1.entry-title {
@@ -34,14 +38,26 @@ h1.entry-title {
   margin: 0;
 }
 
+h1 a {
+  color: #333;
+  text-size: 24pt;
+  text-decoration: none;
+}
+
 /* Sidebar and logo */
 #sidebar {
+  color: #BBB;
   float: left;
   width: 180px;
 }
 
+#sidebar ul a {
+  color: #BBB;
+  text-decoration: none;
+}
+
 #sidebar a {
-  color: #333;
+  color: #FFF;
   text-decoration: none;
 }
 
@@ -83,7 +99,7 @@ h1.entry-title {
 }
 */
 #nav li.active {
-  background: #DBD6BF;
+  background: #555;
 }
 
 #footer {

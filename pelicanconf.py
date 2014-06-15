@@ -10,6 +10,8 @@ TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
+MD_EXTENSIONS = ['codehilite', 'extra']
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -31,7 +33,8 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 MENUITEMS = {('A', 'About', 'pages/about.html'),
              ('B', 'Contact', 'pages/contact.html'),
-             ('C', 'Archives', 'archives.html')}
+             ('C', 'Archives', 'archives.html'),
+             ('D', 'Projects', 'https://github.com/dankolbman')}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
