@@ -1,0 +1,123 @@
+/*
+ * Main style sheet for dankolban.com
+ * By Dan Kolbman
+ */
+html, body, .home {
+  background: #FFF;
+  color: #444;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.4em;
+
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+}
+
+#wrapper {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: none;
+  height: 100%;
+}
+
+/* Header and Navigation */
+#header-bar {
+  background:#955;
+  line-height: 50px;
+}
+
+#header {
+  width: 90%;
+  max-width: 750px;
+  margin: auto auto;
+  padding: 0 25px;
+  height: 50px;
+}
+
+#header h1 {
+  margin: 0px;
+  float: left;
+}
+#header h1 a {
+  color: #FFF;
+  display: block;
+  padding: 0 10px;
+}
+
+#nav {
+  float: right;
+}
+
+#nav, #nav li {
+  font-size: 22px;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+}
+
+#nav a {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 0px 10px;
+}
+
+
+#nav a:hover {
+  background:#733;
+}
+/* Responsive stuff */
+@media all and (max-width: 520px) {
+  #header h1 { padding: 0 10px; }
+  #header { float: none; width: 100%; height: 100%; }
+  #nav {
+    float:none;
+    width:100%;
+    background: #333;
+    padding: 0;
+  }
+  #nav 
+}
+
+#main {
+}
+
+h1.entry-title {
+  padding-top: 20px;
+  margin: 0;
+}
+
+h1 a {
+  color: #DDD;
+  text-size: 24pt;
+  text-decoration: none;
+}
+
+#wrapper a {
+  text-decoration: none;
+  color: #955;
+}
+
+#wrapper a:hover {
+  text-decoration: underline;
+  color: #733;
+}
+  
+
+/* Navigation and button stuff */
+
+/*
+#nav li:hover, #nav a:hover {
+  background: #333;
+  color: #DDD;
+}
+*/
+
+#footer {
+  clear: both;
+  background: #333;
+  height: 15px;
+}
+
