@@ -1,3 +1,4 @@
 title: Contact
 
-Contact page
+Email: dan@kolbman.com [[pgp](|filename|/DanKolbmanPub.asc)]
+

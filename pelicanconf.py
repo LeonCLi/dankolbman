@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Dan Kolbman'
-SITENAME = u'Dan Kolbman'
+AUTHOR = 'Dan Kolbman'
+SITENAME = 'Dan Kolbman'
 SITEURL = ''
 
 TIMEZONE = 'America/New_York'
@@ -23,18 +23,19 @@ LINKS = None
 # Social widget
 SOCIAL = None 
 
+STATIC_PATHS = [ 'DanKolbmanPub.asc' ]
+
 DEFAULT_PAGINATION = False
 
-THEME = 'themes/bootup'
+THEME = 'themes/simple'
+THEME_STATIC_DIR = 'simple/static'
 
 DISPLAY_PAGES_ON_MENU = False
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
-MENUITEMS = {('A', 'About', 'pages/about.html'),
-             ('B', 'Contact', 'pages/contact.html'),
-             ('C', 'Archives', 'archives.html'),
-             ('D', 'Projects', 'https://github.com/dankolbman')}
+MENUITEMS = {('A', 'Contact', 'pages/contact.html'),
+             ('B', 'Projects', 'https://github.com/dankolbman')}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
