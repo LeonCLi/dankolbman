@@ -35,7 +35,7 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 MENUITEMS = {('A', 'Contact', 'pages/contact.html'),
-             ('B', 'Projects', 'https://github.com/dankolbman')}
+             ('B', 'Projects', 'pages/projects.html')}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
