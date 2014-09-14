@@ -1,5 +1,5 @@
 /*
- * Main style sheet for dankolban.com
+ * Main style sheet for dankolbman.com
  * By Dan Kolbman
  */
 html, body, .home {
@@ -7,10 +7,9 @@ html, body, .home {
   color: #444;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.4em;
-
   margin: 0;
   padding: 0;
-
+  font-size: 1.6em;
   height: 100%;
 }
 
@@ -51,7 +50,7 @@ html, body, .home {
 }
 
 #nav, #nav li {
-  font-size: 22px;
+  font-size: 1.2em;
   display: inline-block;
   list-style-type: none;
   margin: 0;
@@ -71,7 +70,7 @@ html, body, .home {
 /* Responsive stuff */
 @media all and (max-width: 520px) {
   #header h1 { padding: 0 10px; }
-  #header { float: none; width: 100%; height: 100%; }
+  #header { float: none; width: 100%; padding: 0px; height: 100%; }
   #nav {
     float:none;
     width:100%;
