@@ -12,6 +12,10 @@ generation output to a website. The simulation engine is written primarily in
 [Julia](http://julialang.org/), a new language for scientific computing, with
 post proccessing done in python.
 
+## [Brownian](https://github.com/dankolbman/brownian)
+![BCIM](../images/2d.png)
+
+
 ## [Macromolecule Simulator](https://github.com/dankolbman/MSim)
 ![Radial Distribution function](../images/gr.png)
 

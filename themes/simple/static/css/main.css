@@ -24,15 +24,15 @@ html, body, .home {
 /* Header and Navigation */
 #header-bar {
   background:#955;
-  line-height: 50px;
+  line-height: 70px;
 }
 
 #header {
   width: 90%;
   max-width: 750px;
   margin: auto auto;
-  padding: 0 25px;
-  height: 50px;
+  padding: 15px 25px;
+  height: 150px;
 }
 
 #header h1 {
@@ -40,20 +40,39 @@ html, body, .home {
   float: left;
 }
 #header h1 a {
+  font-size: 62pt;
   color: #FFF;
+  font-family: Georgia, serif;
   display: block;
   padding: 0 10px;
+  width: 100px;
+}
+
+#content img {
+  display: block;
+  margin: auto;
 }
 
 #nav {
   float: right;
+  width: 10px;
+  height: 100%;
+  padding: 20px 0;
+}
+
+#nav li {
+  float: right;
+  width: 200px;
+  text-align: right;
 }
 
 #nav, #nav li {
   font-size: 1.2em;
+  font-family: Georgia, serif;
   display: inline-block;
   list-style-type: none;
   margin: 0;
+  line-height: 50px;
 }
 
 #nav a {
@@ -62,7 +81,6 @@ html, body, .home {
   display: block;
   padding: 0px 10px;
 }
-
 
 #nav a:hover {
   background:#733;
