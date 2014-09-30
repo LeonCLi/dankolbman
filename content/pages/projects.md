@@ -10,10 +10,14 @@ massively parallel computation across many nodes as well as local parallelizatio
 via the GPU using OpenCL. It also features automatic data loging and notebook
 generation output to a website. The simulation engine is written primarily in
 [Julia](http://julialang.org/), a new language for scientific computing, with
-post proccessing done in python.
+post processing done in python.
 
-## [Brownian](https://github.com/dankolbman/brownian)
+## [Brownian Cell Simulator](https://github.com/dankolbman/brownian)
 ![BCIM](../images/2d.png)
+
+The precursor to BCIM, a 2D equivilent written primarily in fortran with post
+processing in python and matplotlib. Resposible for adding new potentials for
+interaction and producing figures and post processing analysis.
 
 
 ## [Macromolecule Simulator](https://github.com/dankolbman/MSim)

@@ -11,7 +11,7 @@ I'm an advocate of [Open Source](http://opensource.org/) and
 work under [MIT License](http://opensource.org/licenses/MIT) (Including this 
 [site](https://github.com/dankolbman/dankolbman])).
 I am an avid [Linux](https://archlinux.org/) user and my latest favorite language
-is [Julia](http://julialang.org/)
+is [Julia](http://julialang.org/).
 
 ### Contact
 Email: dan@kolbman.com [[pgp](|filename|/DanKolbmanPub.asc)]
