@@ -23,7 +23,11 @@ LINKS = None
 # Social widget
 SOCIAL = None 
 
-STATIC_PATHS = [ 'DanKolbmanPub.asc' ]
+STATIC_PATHS = [ 'DanKolbmanPub.asc', 'images', 'posts' ]
+ARTICLE_PATHS = ['posts']
+
+ARTICLE_SAVE_AS = '{slug}/post.html'
+ARTICLE_URL = '{slug}/post.html'
 
 DEFAULT_PAGINATION = False
 
@@ -34,7 +38,7 @@ DISPLAY_PAGES_ON_MENU = False
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
-MENUITEMS = {('A', 'Contact', 'pages/contact.html'),
+MENUITEMS = {
              ('B', 'Projects', 'pages/projects.html')}
 
 # Uncomment following line if you want document-relative URLs when developing
