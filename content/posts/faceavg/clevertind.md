@@ -6,7 +6,7 @@ date: 2014-12-27
 In this article, I'm going to discuss the steps I took to get an image of the 
 average Tinder girl. If you're also interested in a general analysis of the 
 average Tinder girl's profile, make sure to [Meet Emily: The Average Tinder 
-Girl]().
+Girl]({filename}/posts/meetemily/emily.md).
 
 You can get the scripts and the data I've collected [here](https://github.com/dankolbman/CleverTind).
 
@@ -39,7 +39,7 @@ pretty obvious. Let's construct the average Tinder girl! So then...
 With all those photos, we should be able to build up some idea of what this girl
 looks like. Well a quick and dirty attempt at getting an image of our girl is to
 blindly average all the profile pictures I've collected. Here's what I got after
-adding 39241 primary profile photos together:
+adding 62820 primary profile photos together:
 ![Detected]({attach}prof_avg.png)
 
 It sure doesn't show any detail, but there is some sign that this is a human being.
@@ -84,8 +84,8 @@ If both of these critia are met, great! We'll average it. If not, just ignore it
 Here's what happens after sorting through the same profile pictures as before:
 ![Detected faces]({attach}detect_avg.png)
 
-This is after sorting through the same 39241 profiles as before. The detection 
-method narrowed it down to 13291 positive samples (that's 33.9%).
+This is after sorting through the same 62820 profiles as before. The detection 
+method narrowed it down to 21001 positive samples (that's 33.56%).
 And, Ehh, It's better, a little. There's more shape to the head. There's some sign of a chest
 and neck now too. At the very least, I'd say this is good enough evidence to say
 that the average girl on Tinder is white (or our cascade is biased!). But we 
@@ -101,7 +101,8 @@ like a portrait-like result. This means that just a mere detection is still goin
 to result in a blurry, out of focus, image. Cleary we need some better cooperation.
 The classifier does report the location of each object it detects. Let's try
  scaling each photo to frame only the reported face and average those. This is 
-pretty easy to do with OpenCV using a perspective transform. Here's how I do that:
+pretty easy to do with OpenCV using a perspective transform[^transform]. Here's how I do that:
+
 
     :::Python
     face = np.float32([[x,y],[x+w,y],
@@ -113,6 +114,8 @@ pretty easy to do with OpenCV using a perspective transform. Here's how I do tha
     M = cv2.getPerspectiveTransform(face, frame)
     new_img = cv2.warpPerspective(img, M, (pic_w,pic_h))
 
+[^transform]: OpenCV's [getPerspectiveTransform](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getperspectivetransform) applied with [warpPerspective](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective)
+
 Here, I'm taking the bounding box of the face and having OpenCV get the transform
 required to make it be framed in the full picture. I then apply that transform 
 to the image, and carry on with the averaging from there. After that, we get a
@@ -120,7 +123,7 @@ nice picture:
 
 ![Detected and transformed]({attach}full_101.png)
 
-Now that's pretty good! This is for the same 13291 positive samples as before, 
+Now that's pretty good! This is for the same 21001 positive samples as before, 
 only now they've been centered properly. 
 
 

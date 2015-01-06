@@ -80,7 +80,17 @@ lower than that reported by Tinder, but I'd take it with a grain of salt.
 
 ![Interests]({attach}interests.png)
 
+Well music is certainly far ahead of anything else, but just 'music' is rather
+ambiguous. Here are some of the more popular genres I could find in the list.
+
 ![Music Genres]({attach}genres.png)
+
+Country comes out with a strong lead with more than twice that of rock. Of course
+country is also often used as a identifier, ie 'I'm just a country gal', but they
+go hand in hand for the most part. Again, this popularity likely comes from one 
+of the major demographics (upstate NY) in the data. Rock and punk could also be
+used as adjectives unrelated to genre as well. Overall, we can get some deeper 
+interpretation of popular genres from this, but it shouldn't be taken too seriously.
 
 ### Beverages
 ![Beverages]({attach}beverages.png)
