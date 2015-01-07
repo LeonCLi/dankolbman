@@ -27,7 +27,7 @@ and (only the primary) profile pictures.
 ## What's her name
 
 After a quick analysis, the most common name was Emily, followed closely by 
-Nicole, Amanda, Sarah, and Jessica.
+Sarah.
 
 ![Names]({attach}names.png)
 
@@ -93,11 +93,23 @@ used as adjectives unrelated to genre as well. Overall, we can get some deeper
 interpretation of popular genres from this, but it shouldn't be taken too seriously.
 
 ### Beverages
+
+Coffee was the obvious winner over tea, but surprisingly, beer came out just
+above wine, though still not as popular as coffee.
 ![Beverages]({attach}beverages.png)
 
+As for liquor, whiskey trumped all. Infact, the others are mentioned so infrequently
+that I hesitate to call them statistically meaningful.
 
 ![Liquor]({attach}liquor.png)
 
 ### Sports 
+Hockey seems like it must be another demographic issue, but it could also be the 
+fact that field hockey is also included in this statistic. 
 ![Sports]({attach}sports.png)
+
+Dogs are the clear favorite amongst users, which is not that surprising. If I 
+took the time to train a classifier to identify dogs, I bet I could find a dog 
+in nearly half of all profiles.
+
 ![Pets]({attach}pets.png)
