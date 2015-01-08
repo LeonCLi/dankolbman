@@ -1,7 +1,7 @@
 title: Picturing the Average Tinder Girl
 slug: face-avg
 author: Dan Kolbman
-date: 2014-12-27
+date: 2015-1-8
 
 In this article, I'm going to discuss the steps I took to get an image of the 
 average Tinder girl. If you're also interested in a general analysis of the 
@@ -12,12 +12,11 @@ You can get the scripts and the data I've collected [here](https://github.com/da
 
 ![Lots of girls]({attach}montage.png)
 
-
 Tinder is a simple dating app that has become quite popular, popular enough to
 attract bot accounts advertising purposes. Users of Tinder will be certainly be 
-familiar with the bots that spam simple ads as well as those that semi-intellgently
+familiar with the bots that spam simple ads as well as those that semi-intelligently
 respond to conversation leading into a more convincing ad. After dealing with 
-these bots myslf, I was intrigued by how I might go about making my own bot for
+these bots myself, I was intrigued by how I might go about making my own bot for
 entertainment purposes. It turns out that it's actually relatively easy. The 
 Tinder API only requires a Facebook authentication token of an account with an 
 active Tinder app to retrieve a token for Tinder's API. After that, the Tinder
@@ -45,12 +44,12 @@ adding 62820 primary profile photos together:
 It sure doesn't show any detail, but there is some sign that this is a human being.
 If you squint you can make out a flesh-tinted blob around the center. Perhaps
 that's a hint of shoulders on the lower half? I was quite surprised that anything
-of remote resemblence to a person came out of this. Of course this isn't even
-close to what we're looking for, and fourtunately, we can still do better.
+of remote resemblance to a person came out of this. Of course this isn't even
+close to what we're looking for, and fortunately, we can still do better.
 
 ## Getting rid of the junk
 
-If you've swipped through Tinder profiles before, you'll know there's a lot of
+If you've swiped through Tinder profiles before, you'll know there's a lot of
 variation in the pictures. Some are from far away, some at strange angles, 
 sometimes it's a group shot, or maybe there isn't even a person in it! Sorting 
 out all the awful pictures that are ruining my average is going to help out a
@@ -80,13 +79,13 @@ picture There's only two criteria I'm going to match for:
 1. Is there exactly one face in the photo?
 2. If so, is it at least 100x100px large?
 
-If both of these critia are met, great! We'll average it. If not, just ignore it.
+If both of these criteria are met, great! We'll average it. If not, just ignore it.
 Here's what happens after sorting through the same profile pictures as before:
 ![Detected faces]({attach}detect_avg.png)
 
 This is after sorting through the same 62820 profiles as before. The detection 
 method narrowed it down to 21001 positive samples (that's 33.56%).
-And, Ehh, It's better, a little. There's more shape to the head. There's some sign of a chest
+And, ehh, It's better, a little. There's more shape to the head. There's some sign of a chest
 and neck now too. At the very least, I'd say this is good enough evidence to say
 that the average girl on Tinder is white (or our cascade is biased!). But we 
 still don't have any features, let alone something that can be identified as a
@@ -98,7 +97,7 @@ There's one thing that the cascade classifier is doing that is making the averag
 only 'meh' and that is that it doesn't care about the location of identified faces.
 The classifier will detect a face anywhere in the image, but I want something 
 like a portrait-like result. This means that just a mere detection is still going
-to result in a blurry, out of focus, image. Cleary we need some better cooperation.
+to result in a blurry, out of focus, image. Clearly we need some better cooperation.
 The classifier does report the location of each object it detects. Let's try
  scaling each photo to frame only the reported face and average those. This is 
 pretty easy to do with OpenCV using a perspective transform[^transform]. Here's how I do that:
@@ -154,8 +153,8 @@ see if the result is identifiable as a face:
 
 ![Detected]({attach}detected.png)
 
-And it turns out it is! That shoudn't be too surprising seeing as it's 
+And it turns out it is! That shouldn't be too surprising seeing as it's 
 just an average of positive matches. Though it's still evidence to show that
-the bounding boxes on the detected faces were consistant evough to provide a strong
+the bounding boxes on the detected faces were consistent enough to provide a strong
 average.
 
